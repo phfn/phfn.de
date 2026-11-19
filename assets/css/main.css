@@ -96,6 +96,12 @@ a:hover {
   color: var(--fg);
 }
 
+.site-nav .external {
+  font-size: 0.7em;
+  vertical-align: super;
+  margin-left: 0.15em;
+}
+
 .prose {
   padding-bottom: 2rem;
 }

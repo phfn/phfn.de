@@ -4,7 +4,7 @@
     <nav class="site-nav" aria-label="Hauptnavigation">
       {{ range site.Menus.main }}
         {{ $external := hasPrefix .URL "http" }}
-        <a href="{{ .URL }}"{{ if $external }} rel="me"{{ end }}{{ if and (not $external) (eq $.RelPermalink .URL) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+        <a href="{{ .URL }}"{{ if $external }} rel="me"{{ end }}{{ if and (not $external) (eq $.RelPermalink .URL) }} aria-current="page"{{ end }}>{{ .Name }}{{ if $external }}<span class="external" aria-hidden="true">&#8599;</span>{{ end }}</a>
       {{ end }}
     </nav>
   </div>
