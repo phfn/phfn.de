@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="{{ "/" | relLangURL }}">{{ site.Title }}</a>
+    <nav class="site-nav" aria-label="Hauptnavigation">
+      {{ range site.Menus.main }}
+        {{ $external := hasPrefix .URL "http" }}
+        <a href="{{ .URL }}"{{ if $external }} rel="me"{{ end }}{{ if and (not $external) (eq $.RelPermalink .URL) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>
