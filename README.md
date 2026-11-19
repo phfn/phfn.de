@@ -17,18 +17,12 @@ Danach <http://localhost:1313> öffnen.
 
 ## Veröffentlichen
 
-Der Export wird automatisch per GitHub Actions nach GitHub Pages deployt:
-Jeder Push auf `main` löst `.github/workflows/deploy.yml` aus (alternativ
-manuell über den Tab „Actions“). Die Seite ist unter <https://phfn.de> erreichbar;
-die Domain steht in `static/CNAME`.
-
-Manuell bauen (z. B. zum Prüfen):
-
 ```sh
 hugo --gc --minify
 ```
 
-Der fertige statische Export liegt in `public/`.
+Der fertige statische Export liegt in `public/` und kann auf einen beliebigen
+Webspace hochgeladen werden (GitHub Pages, Netlify, Cloudflare Pages, eigener Server, …).
 
 ## Inhalte bearbeiten
 
